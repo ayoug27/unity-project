@@ -1,3 +1,5 @@
+COMPTE RENDU BLENDER ESSALHI AYOUB :
+
 Pièce :
 - Création d'un Cylindre (Add > Mesh > Cylinder)
 - Scale du Cylindre sur l'axe Z pour avoir l'épaisseur souhaitée
