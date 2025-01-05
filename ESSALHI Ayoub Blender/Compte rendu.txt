@@ -1,0 +1,51 @@
+Pièce :
+- Création d'un Cylindre (Add > Mesh > Cylinder)
+- Scale du Cylindre sur l'axe Z pour avoir l'épaisseur souhaitée
+- Edit Mode > Sélection des deux faces du cylindre
+- Inset faces pour créer des sous-faces dans le cylindre
+- Scale > Extrude sur l'axe Z pour réduire l'épaisseur des ces sous-faces
+- Création d'un Texte (Add > Text)
+- Edit Mode sur le Texte pour écrire "$" 
+- Changement de l'origine de l'objet Texte pour mieux le placer
+- Plaçage de l'objet Texte aux coordonnées 0,0,0 au même endroit que le cylindre
+- Object > Data > Geometry à 0.08m pour que le texte prenne en épaisseur et dépasse des sous-faces pour former une pièce.
+
+Tonneau :
+- Création d'un Cube
+- Scale du Cube pour en faire une Planche (IMPORTANT : Il faut le faire en Edit Mode)
+- Décaler la Planche sur l'axe X pour qu'elle ne soit plus positionnée à l'origine
+- Mettre à jour l'origine de la Planche à (0,0,0) pour que les valeurs Transform de la planche soit à (0,0,0)
+- Loop Cut sur la Planche pour la découper en plein de sous-parties sur l'axe Z
+- Ajout du Modifier "Simple Deform" pour courber la planche à un angle de 45°
+- Création d'un point Empty sur (0,0,0) qui va servir de point de rotation pour faire les autres planches
+- Rotate le point Empty sur l'axe Z
+- Ajout du Modifier "Array" en "Object Offset" sur Empty pour créer les planches qui vont se placer autour du point Empty pour former la forme du tonneau
+- Ajout d'un cylindre sur le bas du tonneau pour fermer le bas de celui-ci, en veillant à ce que l'origine de l'objet soit 0,0,0
+- Ajout du modifier "Mirror" sur l'axe Z pour qu'un cylindre apparaisse aussi sur le haut du tonneau
+- Ajout d'un Cube que l'on scale en Edit Mode pour en faire une planche à l'horizontal.
+- Placer le cube au dessus/en dessous du cylindre de fermeture en veillant à ce que l'origine de l'objet soit 0,0,0
+- Ajout du modifier "Array" sur la planche horizontal pour en faire plusieurs disposé sur l'axe Y
+- Ajout du modifier "Boolean" sur la planche avec en objet paramètre le Cylindre de fermeture
+- Ajout du modifier "Mirror" sur l'axe Z pour avoir un effet planche de bois sur nos cylindres de fermeture.
+- Création d'un cylindre qui représente un disque métallique du tonneau
+- Scale de la face extérieure du cylindre pour la rendre plus petite que la face intérieure mais toujours plus grande que le tonneau.
+- Ajout du modifier "Mirror" pour avoir un disque métallique en bas et en haut du tonneau.
+
+Suzanne : 
+- onglet UV Editing
+- Unwrap
+- Sélectionner les arêtes souhaités pour découper les textures de modèle (Visage, Oeil, Arrière du crâne..) grâce à Mark Sem
+- Une fois le découpage fini, cliquer sur Unwrap
+- Exporter le calque de texture en PNG
+- Ouvrir sur GIMP et dessiner par dessus
+- Ajouter la texture dans le material utilisé par l'objet Suzanne
+
+Table :
+- Création d'un cube
+- Scale du Cube pour en faire le haut de la table (en EDIT MODE)
+- Décaler le haut de la table sur l'axe Z pour qu'elle soit surélevée
+- Placer l'origine du haut de la table vers l'objet géométrique.
+- Création d'un autre cube
+- Scale du Cube pour en faire un pied de table
+- Placer le pied de table vers un coin de la table en dessous du haut de la table
+- Ajout du modifier "Mirror" sur l'axe X et Y pour placer des pieds de table à chaque coin de celle-ci
